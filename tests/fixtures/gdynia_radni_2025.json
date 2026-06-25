@@ -1,0 +1,48 @@
+{
+ "posts": [
+  {
+   "id": "621729",
+   "type": "declarations",
+   "slug": "oswiadczenia-majatkowe-radnych-za-rok-2025",
+   "title": "Oświadczenia majątkowe radnych za rok 2025 ",
+   "extended_data": {
+    "declarations": [
+     {
+      "lp": 1,
+      "declarations_name": "Anisowicz Norbert",
+      "declarations_position": "radny",
+      "protocol": {
+       "url": "https://legacy.um.gdynia.pl/module/Files/controller/Default/action/downloadFile/hash/9de33bf7ba94ea9994c1b96cf0f5a694.pdf",
+       "icon": "fa fa-file-pdf-o",
+       "extension": "pdf",
+       "title": "oświadczenie majątkowe radnego wg stanu na 31 grudnia 2025 r.",
+       "size": "624kb"
+      },
+      "responsible_person": "Magdalena Anuszek",
+      "insert_author": "Bożena Słowi",
+      "last_modification_author": "Bożena Słowi",
+      "date_of_manufacture": "20.05.2026",
+      "insert_date": "22.05.2026",
+      "last_modification_date": "22.05.2026"
+     },
+     {
+      "lp": 27,
+      "declarations_name": "Zielińska Joanna",
+      "declarations_position": "radna",
+      "protocol": {
+       "url": "https://legacy.um.gdynia.pl/module/Files/controller/Default/action/downloadFile/hash/95ed1abd0cef513343056afbec7c7311.pdf",
+       "icon": "fa fa-file-pdf-o",
+       "extension": "pdf",
+       "title": "oświadczenie majątkowe radnej wg stanu na 31 grudnia 2025 r.",
+       "size": "655kb"
+      },
+      "responsible_person": "Magdalena Anuszek",
+      "last_modification_author": "Bożena Słowi",
+      "date_of_manufacture": "22.05.2026",
+      "last_modification_date": "22.05.2026"
+     }
+    ]
+   }
+  }
+ ]
+}

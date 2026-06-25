@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: greedy
+      POSTGRES_PASSWORD: greedy
+      POSTGRES_DB: greedy_doctor
+    ports:
+      - "5544:5432"  # nietypowy port, zeby nie kolidowac z lokalnym pg
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U greedy -d greedy_doctor"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+volumes:
+  pgdata:

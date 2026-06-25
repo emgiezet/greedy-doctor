@@ -1,0 +1,76 @@
+{
+ "posts": [
+  {
+   "id": "606859",
+   "type": "declarations",
+   "slug": "oswiadczenia-majatkowe-radni-2025",
+   "title": "Oświadczenia majątkowe radnych za rok 2024",
+   "extended_data": {
+    "declarations": [
+     {
+      "lp": 1,
+      "declarations_name": "Anisowicz Norbert ",
+      "declarations_position": "radny Rady Miasta Gdyni",
+      "protocol": {
+       "url": "https://legacy.um.gdynia.pl/module/Files/controller/Default/action/downloadFile/hash/d83dc244eedb257ae38da908bba54662.pdf",
+       "icon": "fa fa-file-pdf-o",
+       "extension": "pdf",
+       "title": "oświadczenie majątkowe radnego wg stanu na 31 grudnia 2024 r.  ",
+       "size": "543kb"
+      },
+      "responsible_person": "Magdalena Anuszek",
+      "insert_author": "Bożena Słowi",
+      "last_modification_author": "Bożena Słowi",
+      "date_of_manufacture": "26.02.2025",
+      "insert_date": "23.05.2025",
+      "last_modification_date": "23.05.2025"
+     },
+     {
+      "lp": 10,
+      "declarations_name": "Kłopotek-Gł&oacute;wczewska Natalia ",
+      "declarations_position": "radna Rady Miasta Gdyni",
+      "protocol": {
+       "url": "https://legacy.um.gdynia.pl/module/Files/controller/Default/action/downloadFile/hash/abff30adea11f895b83a1ac087a77d77.pdf",
+       "icon": "fa fa-file-pdf-o",
+       "extension": "pdf",
+       "title": "oświadczenie majątkowe radnego wg stanu na 31 grudnia 2024 r.  ",
+       "size": "933kb"
+      },
+      "responsible_person": "Magdalena Anuszek",
+      "insert_author": "Bożena Słowi",
+      "date_of_manufacture": "26.02.2025",
+      "insert_date": "23.05.2025"
+     },
+     {
+      "lp": 28,
+      "declarations_name": "Żynis Jakub",
+      "declarations_position": "radny Rady Miasta Gdyni",
+      "protocol": {
+       "url": "https://legacy.um.gdynia.pl/module/Files/controller/Default/action/downloadFile/hash/6d9773d65301607f2a3b4940a184b787.pdf",
+       "icon": "fa fa-file-pdf-o",
+       "extension": "pdf",
+       "title": "oświadczenie majątkowe radnego na dzień ślubowania 22.01.2025 r.",
+       "size": "1202kb"
+      },
+      "responsible_person": "Magdalena Anuszek",
+      "insert_author": "Bożena Słowi",
+      "last_modification_author": "Bożena Słowi",
+      "date_of_manufacture": "26.02.2025",
+      "insert_date": "26.02.2025",
+      "last_modification_date": "23.05.2025"
+     },
+     {
+      "lp": 99,
+      "declarations_name": "Bezpliku Jan",
+      "declarations_position": "radny Rady Miasta Gdyni",
+      "protocol": {
+       "url": "",
+       "extension": "pdf",
+       "title": "oświadczenie majątkowe radnego wg stanu na 31 grudnia 2024 r."
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
