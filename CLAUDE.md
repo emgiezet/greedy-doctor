@@ -14,7 +14,7 @@ uv sync                                  # install Python deps into .venv
 docker compose up -d                     # Postgres 17 on localhost:5544
 
 # Pipeline — each is an independent worker draining a Postgres queue; run in order
-.venv/bin/python -m greedy_doctor.crawl --source kielce   # kielce|poznan|dolnoslaskie|nowytomysl
+.venv/bin/python -m greedy_doctor.crawl --source kielce   # any key from SOURCES (23 total)
 .venv/bin/python -m greedy_doctor.extract
 .venv/bin/python -m greedy_doctor.classify --limit 50     # --limit optional
 .venv/bin/python -m greedy_doctor.analyze
@@ -55,7 +55,7 @@ Tables (`db.py`): `radny` (councilor) → `declaration` (1:N; holds pdf/raw_text
 total_income, implied_h_etat, implied_h_b2b, flag).
 
 ### Modules
-- `crawl.py` + `sources/*.py` — one adapter per city, each exposing `CITY` and `iter_declarations(client) → (name, year, pdf_url)`. **Adding a city = adding a `sources/` module.** Kielce/Dolnośląski PDFs have a text layer; Poznań/Nowy Tomyśl are scans and need OCR.
+- `crawl.py` + `sources/*.py` — one adapter per source, each exposing `CITY` and `iter_declarations(client) → (name, year, pdf_url)`. **Adding a source = adding a `sources/` module** — auto-discovered via `pkgutil`. Sources with broken TLS declare `VERIFY = False`; `crawl.py` reads `getattr(src, "VERIFY", True)`. 23 sources: all 16 voivodeship sejmiks + 7 city councils (Gdańsk, Gdynia, Kielce, Nowy Tomyśl, Poznań, Skierniewice, Sopot). CMS engines: Madkom REST, SmartSite/BIT, Joomla/K2, Joomla+Phoca Download, Joomla com\_govarticle, WordPress WP REST API, TYPO3 Bootstrap accordion, static HTML/Yii2, Drupal 7, RBIP v4, SystemDoBIP/E-LINE.
 - `extract.py` — pdfplumber for text PDFs; scans go to `tesseract -l pol`; if tesseract returns too little, falls back to an Ollama vision model.
 - `classify.py` — httpx → Ollama `/api/generate` with a Pydantic schema as the `format`; default model Bielik-Minitron-7B (Polish). Returns `ParsedDeclaration{income: [IncomeEntry], mentions_medical}`.
 - `analyze.py` — `implied_monthly_hours` + `classify_hours` against `norms.py`. Dedups income lines by amount because the LLM lists the same sum under multiple titles.

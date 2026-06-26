@@ -55,7 +55,7 @@ def parse_person(page_html):
 
 
 def iter_declarations(client):
-    """Jednolity interfejs crawla: (name, year, pdf_url) per oswiadczenie."""
+    """Jednolity interfejs crawla: (name, year, pdf_url, landing_url) per oswiadczenie."""
     import time
 
     for purl in parse_listing(client.get(LISTING_URL).text):
@@ -64,4 +64,4 @@ def iter_declarations(client):
         if not name:
             continue
         for year, pdf_url in docs:
-            yield name, year, pdf_url
+            yield name, year, pdf_url, purl

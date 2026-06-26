@@ -77,7 +77,7 @@ def pick_declaration(page_html):
 
 
 def iter_declarations(client):
-    """Jednolity interfejs crawla: (name, year, pdf_url) per roczne oswiadczenie radnego."""
+    """Jednolity interfejs crawla: (name, year, pdf_url, landing_url) per roczne oswiadczenie radnego."""
     import time
 
     for year, listing_url in YEAR_LISTINGS.items():
@@ -85,4 +85,4 @@ def iter_declarations(client):
             time.sleep(0.3)
             pdf_url = pick_declaration(client.get(radny_url).text)
             if pdf_url:
-                yield name, year, pdf_url
+                yield name, year, pdf_url, radny_url

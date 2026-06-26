@@ -62,7 +62,7 @@ def parse_radny_page(page_html, page_url):
 
 
 def iter_declarations(client):
-    """Jednolity interfejs crawla: (name, year, pdf_url) per oswiadczenie radnego sejmiku."""
+    """Jednolity interfejs crawla: (name, year, pdf_url, landing_url) per oswiadczenie radnego sejmiku."""
     import time
 
     for year, year_url in YEAR_PAGES.items():
@@ -70,4 +70,4 @@ def iter_declarations(client):
             time.sleep(0.3)
             pdf_url = parse_radny_page(client.get(radny_url).text, radny_url)
             if pdf_url:
-                yield name, year, pdf_url
+                yield name, year, pdf_url, radny_url
